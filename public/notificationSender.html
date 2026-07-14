@@ -1,0 +1,59 @@
+<!-- public/notificationSender.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Safe Send - Notifications (Sender)</title>
+  <link rel="stylesheet" href="css/notificationSender.css"/>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <h1>📢 Safe Send <span class="highlight">Notification Dashboard</span></h1>
+
+    <!-- Preferences -->
+    <div class="preferences card">
+      <h2>⚙️ Notification Preferences</h2>
+      <div class="toggle">
+        <span>Email Alerts</span>
+        <label class="switch">
+          <input type="checkbox" id="notifyEmail">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle">
+        <span>Push Notifications</span>
+        <label class="switch">
+          <input type="checkbox" id="notifyPush">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle">
+        <span>Mobile Alerts (PWA)</span>
+        <label class="switch">
+          <input type="checkbox" id="notifyMobile">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <button id="savePrefsBtn" class="btn">💾 Save Preferences</button>
+    </div>
+
+    <!-- Activity Dashboard -->
+    <div class="live-dashboard card">
+      <h2>📊 Real-time File Activity</h2>
+      <ul id="activityFeed" class="feed">
+        <li class="empty">No activity yet 🚀</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">Preferences saved ✅</div>
+
+  <!-- Firebase -->
+  <script type="module" src="js/firebase.js"></script> 
+  <script type="module" src="js/notificationSender.js"></script>
+</body>
+</html>

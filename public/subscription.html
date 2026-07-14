@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Send - Premium Subscriptions</title>
+  <link rel="stylesheet" href="css/subscription.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Safe Send</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#upload">Upload</a></li>
+          <li><a href="login.html" class="btn">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Subscription Plans -->
+  <section class="subscription-section">
+    <div class="container">
+      <h2>Choose Your Premium Plan</h2>
+      <p>Unlock advanced features and enhance your file security with Safe Send Premium.</p>
+      
+      <div class="plans-grid">
+
+        <!-- Plan 1: First Premium Card Only -->
+        <div class="plan-card">
+          <h3>Real-time Notifications</h3>
+          <p>Get alerts whenever your files are accessed or downloaded.</p>
+          <div class="pricing-options">
+            <button class="pricing-btn" data-price="5" data-plan="plan1" data-duration="weekly">Weekly - $5</button>
+            <button class="pricing-btn" data-price="15" data-plan="plan1" data-duration="monthly">Monthly - $15</button>
+            <button class="pricing-btn" data-price="150" data-plan="plan1" data-duration="yearly">Yearly - $150</button>
+          </div>
+          <button class="subscribe-btn" id="subscribePlan1">Subscribe</button>
+        </div>
+
+        <!-- Plan 2: First + Second Premium Card -->
+        <div class="plan-card">
+          <h3>Real-time Notifications + Time-Limited Access</h3>
+          <p>Get real-time alerts and control how long your files remain accessible.</p>
+          <div class="pricing-options">
+            <button class="pricing-btn" data-price="10" data-plan="plan2" data-duration="weekly">Weekly - $10</button>
+            <button class="pricing-btn" data-price="30" data-plan="plan2" data-duration="monthly">Monthly - $30</button>
+            <button class="pricing-btn" data-price="300" data-plan="plan2" data-duration="yearly">Yearly - $300</button>
+          </div>
+          <button class="subscribe-btn" id="subscribePlan2">Subscribe</button>
+        </div>
+
+        <!-- Plan 3: All Premium Cards -->
+        <div class="plan-card">
+          <h3>All Premium Features</h3>
+          <p>Get access to Real-time Notifications, Time-Limited Access, and Download Tracking.</p>
+          <div class="pricing-options">
+            <button class="pricing-btn" data-price="15" data-plan="plan3" data-duration="weekly">Weekly - $15</button>
+            <button class="pricing-btn" data-price="45" data-plan="plan3" data-duration="monthly">Monthly - $45</button>
+            <button class="pricing-btn" data-price="450" data-plan="plan3" data-duration="yearly">Yearly - $450</button>
+          </div>
+          <button class="subscribe-btn" id="subscribePlan3">Subscribe</button>
+        </div>
+
+      </div>
+
+      <!-- Skip Button -->
+      <div class="skip-container" style="margin-top: 30px;">
+        <button id="skipBtn" class="subscribe-btn" style="background-color: #777;">Skip for now</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/subscription.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* ===== Base Layout ===== */
+body {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #121212;
+  color: #f5f5f5;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  width: 360px;
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Tab Buttons ===== */
+.tab-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab-buttons button {
+  appearance: none;
+  background: #222;
+  color: #ddd;
+  border: 1px solid #2a2a2a;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-buttons button.active {
+  background: #2a2a2a;
+  color: #ff6b6b;
+  border-color: #ff6b6b66;
+}
+
+/* ===== Forms ===== */
+.form {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form.active {
+  display: flex;
+}
+
+input, select, button {
+  font: inherit;
+}
+
+/* ===== Inputs ===== */
+input, select {
+  width: 100%;
+  margin: 6px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  background: #161616;
+  color: #f5f5f5;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, select:focus {
+  border-color: #ff6b6b88;
+  box-shadow: 0 0 0 3px rgba(255,107,107,0.15);
+}
+
+/* ===== Buttons ===== */
+button[type="submit"], #sendOtpBtn {
+  margin-top: 8px;
+  padding: 12px;
+  background: #ff4d4d;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+button:disabled {
+  filter: grayscale(0.6) opacity(0.7);
+  cursor: not-allowed;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* ===== Action Sections (Optional for multiple buttons) ===== */
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* ===== Messages ===== */
+.message, .error-message {
+  min-height: 20px;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.message {
+  color: #8be28b;
+}
+
+.error-message {
+  color: #ff8b8b;
+}
+
+/* ===== Utilities ===== */
+.visually-hidden, .sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}

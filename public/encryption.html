@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Send - End-to-End Encryption</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/encryption.css">
+</head>
+<body>
+
+<header>
+  <h1>Safe Send</h1>
+  <p>Encrypt files locally before uploading. Only you and the receiver can decrypt them.</p>
+</header>
+
+<main>
+  <div class="upload-box" id="uploadBox">
+    <div class="drag-drop-area" id="dragDropArea">
+      <p>📁 Drag & Drop Files Here</p>
+      <p>or click to select</p>
+      <input type="file" id="fileInput" multiple>
+    </div>
+    <textarea id="note" placeholder="Optional encrypted note"></textarea>
+    <button id="encryptBtn">Encrypt Files</button>
+    <div id="loader" class="loader hidden"></div>
+  </div>
+
+  <section class="file-list">
+    <h2>Encrypted Files</h2>
+    <div id="filesContainer"></div>
+  </section>
+</main>
+
+<!-- AES Key Modal -->
+<div id="keyModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Share AES Key with Receiver</h2>
+    <p>Copy this key and send it securely to the receiver:</p>
+    <input type="text" id="aesKeyInput" readonly>
+    <button id="copyKeyBtn">Copy Key</button>
+  </div>
+</div>
+
+<script src="js/encryption.js" defer></script>
+</body>
+</html>

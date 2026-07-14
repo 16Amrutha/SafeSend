@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Tracking</title>
+  <link rel="stylesheet" href="css/trackingSender.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Download Tracking</h1>
+    
+    <div class="alerts" id="alerts"></div>
+
+    <table id="downloadsTable">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Timestamp</th>
+          <th>IP</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Download logs will populate here -->
+      </tbody>
+    </table>
+
+    <button id="exportBtn">Export CSV</button>
+
+    <h2>Download Stats</h2>
+    <canvas id="downloadsChart"></canvas>
+  </div>
+
+  <script src="js/trackingSender.js"></script>
+</body>
+</html>

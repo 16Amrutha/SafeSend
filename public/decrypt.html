@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Send - Decrypt Files</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/encryption.css">
+</head>
+<body>
+
+<header>
+  <h1>Safe Send</h1>
+  <p>Decrypt files locally using the AES key shared by the sender.</p>
+</header>
+
+<main>
+  <div class="upload-box" id="decryptBox">
+    <div class="drag-drop-area" id="decryptDropArea">
+      <p>📁 Drag & Drop Encrypted File Here</p>
+      <p>or click to select</p>
+      <input type="file" id="decryptFileInput">
+    </div>
+
+    <input type="text" id="aesKeyInput" placeholder="Paste AES Key here">
+    <button id="decryptBtn">Decrypt File</button>
+    <div id="decryptLoader" class="loader hidden"></div>
+  </div>
+
+  <section class="file-list">
+    <h2>Decrypted Files</h2>
+    <div id="decryptedContainer"></div>
+  </section>
+</main>
+
+<!-- Toast for notifications -->
+<div id="toast" class="toast hidden"></div>
+
+<script src="js/decrypt.js" defer></script>
+</body>
+</html>

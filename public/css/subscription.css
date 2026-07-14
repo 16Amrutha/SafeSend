@@ -1,0 +1,137 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body & Header */
+body {
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 15px 0;
+  color: #fff;
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #4CAF50;
+}
+
+/* Subscription Section */
+.subscription-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.subscription-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subscription-section p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* Plans Grid */
+.plans-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.plan-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.plan-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.plan-card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.pricing-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.pricing-btn {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.pricing-btn:hover,
+.pricing-btn.active {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.subscribe-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: #45a049;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .plans-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

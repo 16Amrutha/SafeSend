@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time-Limited File Access - Sender</title>
+  <link rel="stylesheet" href="css/timeLimitedSender.css">
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Time-Limited File Sharing</h1>
+
+    <div class="upload-section">
+      <input type="file" id="fileInput" multiple>
+      <label for="expiryDate">Set Expiration Date & Time:</label>
+      <input type="datetime-local" id="expiryDate">
+
+      <label for="gracePeriod">Grace Period (minutes):</label>
+      <input type="number" id="gracePeriod" value="5" min="1">
+
+      <button id="setTimerBtn">Set Timer</button>
+    </div>
+
+    <div class="file-list">
+      <h2>Files Status</h2>
+      <ul id="filesContainer"></ul>
+    </div>
+
+    <div id="notifications"></div>
+  </div>
+
+  <script src="js/timeLimitedSender.js"></script>
+</body>
+</html>

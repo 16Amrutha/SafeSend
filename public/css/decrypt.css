@@ -1,0 +1,204 @@
+/* Fonts & Colors */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin: 25px;
+}
+
+header h1 { 
+  font-size: 2.2em; 
+  color: #b71c1c; 
+}
+
+header p { 
+  color: #555; 
+  font-size: 1em; 
+}
+
+/* Upload / Decrypt Box */
+.upload-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  width: 420px;
+  padding: 25px;
+  margin-bottom: 30px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.drag-drop-area {
+  border: 2px dashed #b71c1c;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 15px;
+  background-color: #fff5f5;
+}
+
+.drag-drop-area.hover {
+  background-color: #ffebee;
+  box-shadow: 0 0 20px rgba(183,28,28,0.4);
+}
+
+input[type="file"] {
+  display: block;
+  margin: 10px auto;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95em;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background-color: #b71c1c;
+  color: white;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #7f0000;
+}
+
+/* Loader */
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #b71c1c;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.hidden { display: none; }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* File List */
+.file-list {
+  width: 420px;
+}
+
+.file-list h2 {
+  color: #b71c1c;
+  margin-bottom: 12px;
+}
+
+/* File Card */
+.fileItem {
+  background-color: #fff;
+  border-left: 5px solid #b71c1c;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: appear 0.5s forwards;
+  position: relative;
+}
+
+@keyframes appear {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fileItem:hover {
+  transform: translateY(-3px);
+}
+
+.downloadBtn {
+  background-color: #b71c1c;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85em;
+  transition: 0.3s;
+}
+
+.downloadBtn:hover {
+  background-color: #7f0000;
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background-color: #eee;
+  border-radius: 6px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #b71c1c;
+  transition: width 0.3s ease;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .upload-box, .file-list {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #b71c1c;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.95em;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1001;
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+}
+
+.toast.hidden {
+  display: none;
+}
